@@ -1,9 +1,7 @@
 <!-- Define que el documento es un archivo HTML5 moderno -->
 <!DOCTYPE html>
-
 <!-- Define el idioma principal del sitio web (en este caso, inglés "en") -->
 <html lang="en">
-
 <!-- Contiene la información de configuración del sitio (metadatos) que no se ve directamente en la página -->
 <head>
     
@@ -28,7 +26,7 @@
     <!-- Instrucciones para los robots de búsqueda (como Googlebot): "index" les pide registrar la página y "follow" les pide seguir los enlaces que haya en ella -->
     <meta name="robots" content="index, follow">
     
-    <!-- Define el color de la barra de direcciones o la interfaz del navegador en dispositivos móviles (en este caso, un tono azul celeste) -->
+    <!-- Define el color de la   de direcciones o la interfaz del navegador en dispositivos móviles (en este caso, un tono azul celeste) -->
     <meta name="theme-color" content="#09f">
     
     <!-- Enlace al favicon: El pequeño icono que aparece en la pestaña del navegador al lado del título -->
@@ -36,6 +34,269 @@
     
     <!-- El título oficial de la página que se muestra en la pestaña del navegador -->
     <title>My Website</title>
+
+
+    <style>
+    /* --- Resets y Estilos Globales --- */
+    * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+    }
+
+    body {
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+        color: #2d3748; /* Gris oscuro para mejorar la legibilidad */
+        background-color: #f7fafc; /* Fondo sutilmente gris */
+        line-height: 1.6;
+        padding: 40px 20px;
+    }
+
+    /* Contenedor principal estilo hoja A4 / CV moderno */
+    main, body > head, body > footer {
+        max-width: 800px;
+        margin: 0 auto 24px auto;
+        background: #ffffff;
+        padding: 40px;
+        border-radius: 8px;
+        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+    }
+
+    /* --- Encabezado Principal (Header) --- */
+    body > head {
+        border-bottom: 3px solid #1a365d; /* Línea azul marino corporativo */
+        padding-bottom: 20px;
+    }
+
+    h1 {
+        font-size: 2.5rem;
+        color: #1a365d;
+        font-weight: 700;
+        letter-spacing: -0.5px;
+        margin-bottom: 15px;
+    }
+
+    /* Menú de navegación discreto */
+    nav ul {
+        list-style: none;
+        display: flex;
+        gap: 20px;
+        flex-wrap: wrap;
+    }
+
+    nav a {
+        color: #4a5568;
+        text-decoration: none;
+        font-size: 0.95rem;
+        font-weight: 500;
+        transition: color 0.2s ease;
+    }
+
+    nav a:hover {
+        color: #1a365d;
+        text-decoration: underline;
+    }
+
+    /* --- Elementos Multimedia (Ajuste Ejecutivo) --- */
+    video {
+        display: block;
+        max-width: 800px;
+        width: 100%;
+        margin: 0 auto 24px auto;
+        border-radius: 8px;
+        max-height: 250px;
+        object-fit: cover; /* Evita que el video rompa la estructura */
+    }
+
+    img[alt="Profile Picture"] {
+        display: block;
+        border-radius: 50%; /* Foto de perfil circular */
+        border: 3px solid #e2e8f0;
+        margin: 20px 0;
+        object-fit: cover;
+        width: 150px;
+        height: 150px;
+    }
+
+    /* --- Secciones y Títulos --- */
+    h2 {
+        font-size: 1.5rem;
+        color: #2c5282;
+        border-bottom: 1px solid #e2e8f0;
+        padding-bottom: 8px;
+        margin-top: 35px;
+        margin-bottom: 20px;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+    }
+
+    h3, h4 {
+        color: #2d3748;
+        font-size: 1.15rem;
+        margin-bottom: 10px;
+    }
+
+    p {
+        margin-bottom: 16px;
+        color: #4a5568;
+    }
+
+    /* Listas (Datos personales y Tecnologías) */
+    ul, ol {
+        padding-left: 20px;
+        margin-bottom: 20px;
+    }
+
+    li {
+        margin-bottom: 6px;
+        color: #4a5568;
+    }
+
+    /* --- Bloques de Proyectos y Contenido --- */
+    aside {
+        background: #f8fafc;
+        padding: 20px;
+        border-left: 4px solid #4299e1;
+        border-radius: 0 8px 8px 0;
+        margin-bottom: 24px;
+    }
+
+    article {
+        background: #f8fafc;
+        border: 1px solid #e2e8f0;
+        border-radius: 6px;
+        padding: 20px;
+        margin-bottom: 20px;
+    }
+
+    article footer small {
+        display: block;
+        margin-top: 10px;
+        color: #718096;
+        font-style: italic;
+    }
+
+    /* Desplegables (FAQ) */
+    details {
+        background: #fff;
+        border: 1px solid #e2e8f0;
+        border-radius: 6px;
+        margin-bottom: 12px;
+        padding: 12px;
+    }
+
+    summary {
+        font-weight: 600;
+        color: #2d3748;
+        cursor: pointer;
+        outline: none;
+    }
+
+    details[open] summary {
+        margin-bottom: 10px;
+        color: #2c5282;
+    }
+
+    /* --- Formularios Profesionales --- */
+    form {
+        margin-bottom: 30px;
+    }
+
+    fieldset {
+        border: 1px solid #e2e8f0;
+        border-radius: 8px;
+        padding: 24px;
+        background: #fff;
+    }
+
+    legend {
+        padding: 0 10px;
+        font-weight: 600;
+        color: #2c5282;
+    }
+
+    label {
+        display: block;
+        margin-bottom: 16px;
+        font-weight: 500;
+        font-size: 0.9rem;
+        color: #4a5568;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    textarea,
+    select {
+        display: block;
+        width: 100%;
+        padding: 10px;
+        margin-top: 6px;
+        border: 1px solid #cbd5e0;
+        border-radius: 4px;
+        background-color: #fff;
+        font-family: inherit;
+        font-size: 0.95rem;
+        color: #2d3748;
+        transition: border-color 0.2s;
+    }
+
+    input:focus, textarea:focus, select:focus {
+        outline: none;
+        border-color: #4299e1;
+        box-shadow: 0 0 0 3px rgba(66, 153, 225, 0.15);
+    }
+
+    textarea {
+        resize: vertical;
+        min-height: 100px;
+    }
+
+    button[type="submit"] {
+        background-color: #1a365d;
+        color: #ffffff;
+        border: none;
+        padding: 12px 24px;
+        font-size: 0.95rem;
+        font-weight: 600;
+        border-radius: 4px;
+        cursor: pointer;
+        transition: background-color 0.2s;
+    }
+
+    button[type="submit"]:hover {
+        background-color: #2a4365;
+    }
+
+    /* --- Pie de Página (Footer) --- */
+    body > footer {
+        text-align: center;
+        padding: 24px;
+        font-size: 0.9rem;
+        color: #718096;
+        border-top: 1px solid #e2e8f0;
+    }
+
+    body > footer a {
+        color: #2c5282;
+        text-decoration: none;
+        margin: 0 10px;
+        font-weight: 500;
+    }
+
+    body > footer a:hover {
+        text-decoration: underline;
+    }
+
+    /* Ajustes adaptativos para pantallas pequeñas */
+    @media (max-width: 600px) {
+        body { padding: 10px; }
+        main, body > head, body > footer { padding: 20px; }
+        h1 { font-size: 1.8rem; }
+    }
+</style>
+
+
+
 </head>
 <body>
 <head>
@@ -44,10 +305,10 @@
     </h1>
     <nav>
         <ul>
-            <li><a href="#about">About Me</a></li> <!-- enlaces internos -->
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#contact">Contact</a></li>
-            <li><a href="https://realmadrid.com/" target="_blank" rel="noreferrer">Real Madrid</a></li> <!-- enlace externo -->
+            <li><a class="link" href="#about">About Me</a></li> <!-- enlaces internos -->
+            <li><a class="link" href="#projects">Projects</a></li>
+            <li><a class="link" href="#contact">Contact</a></li>
+            <li><a class="link" href="https://realmadrid.com/" target="_blank" rel="noreferrer">Real Madrid</a></li> <!-- enlace externo -->
         </ul>
     </nav>
 </head>
@@ -58,9 +319,9 @@
 
 <main>
 
-<h1>
+<h2>
 Welcome to My Website
-</h1>
+</h2>
 
 <p>
 This is a simple HTML page that serves as the homepage for 
@@ -178,7 +439,7 @@ alt="Profile Picture" height="200">
             <label>Message:
                 <textarea id="message" name="message" required></textarea>
             </label>
-            <button type="submit">Submit</button>
+            <button id="show" type="submit">Submit</button>
         </fieldset>
     </form>
     <form action="https://example.com/submit-form" method="POST">
@@ -203,7 +464,7 @@ alt="Profile Picture" height="200">
                 </datalist>
                 <input type="text" id="topic" name="topic" list="topics" placeholder="Enter a topic...">
             </label>
-            <button type="submit">Subscribe</button>
+            <button id="show" type="submit">Subscribe</button>
         </fieldset>
     </form>
 </section>
